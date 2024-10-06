@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.rockmanjoe.thespian.features.PopularActors
 import com.rockmanjoe.thespian.ui.theme.ThespianTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ThespianTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    PopularActors(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -42,6 +40,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     ThespianTheme {
-        Greeting("Android")
+        PopularActors()
     }
 }
